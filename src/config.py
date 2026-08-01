@@ -25,7 +25,7 @@ OUTPUT_DIR = ROOT_DIR / "outputs"
 # Dataset Paths
 # =========================
 
-RAW_DATA_PATH = RAW_DATA_DIR / "dataset.csv"
+RAW_DATA_PATH = RAW_DATA_DIR / "eng.train"
 
 TRAIN_DATA_PATH = PROCESSED_DATA_DIR / "train"
 
@@ -37,9 +37,8 @@ VALID_DATA_PATH = PROCESSED_DATA_DIR / "validation"
 # Model Configuration
 # =========================
 
-MODEL_NAME = "roberta-base"
+MODEL_NAME = "microsoft/deberta-v3-base"
 
-NUM_LABELS = 77
 
 
 
@@ -51,14 +50,14 @@ SEED = 42
 
 BATCH_SIZE = 16
 
-NUM_EPOCHS = 5
+NUM_EPOCHS = 3
 
 
 # =========================
 # Evaluation
 # =========================
 
-METRIC_FOR_BEST_MODEL = "macro_f1"
+METRIC_FOR_BEST_MODEL = "f1"
 
 REPORT_DIR = ROOT_DIR / "reports"
 PLOT_DIR = REPORT_DIR / "plots"
